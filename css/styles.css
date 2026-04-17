@@ -33,6 +33,7 @@ body {
   font-family: var(--font-text);
   background-color: var(--page-bg);
   color: #333;
+  transition: background-color 0.4s ease;
 }
 
 /* Page transitions */
@@ -120,7 +121,7 @@ a {
   left: 50%;
   transform: translate(-50%, 50%);
   font-family: var(--font-menu);
-  font-size: clamp(1rem, 2dvw, 1.5rem);
+  font-size: clamp(1.1rem, 2.2dvw, 1.75rem);
   color: var(--btn-color, #ccc);
   text-decoration: underline;
   z-index: 1000;
@@ -141,6 +142,7 @@ a {
   background-color: var(--page-container-bg);
   display: flex;
   flex-direction: column;
+  transition: background-color 0.4s ease;
 }
 
 .content-scroll {

@@ -9,13 +9,51 @@
   "social": {
     "instagram": "https://www.instagram.com/930blurberrie/"
   },
+  "colors": {
+    "home": {
+      "bg": "#808080",
+      "container": "#d2d2d2",
+      "button": "#444",
+      "buttonHover": "#000"
+    },
+    "about": {
+      "bg": "#4a4a4a",
+      "container": "rgba(60, 60, 60, 0.8)",
+      "button": "#ccc",
+      "buttonHover": "#fff"
+    },
+    "dressme": {
+      "bg": "#6b4a5e",
+      "container": "#5a3d50",
+      "button": "#ccc",
+      "buttonHover": "#fff"
+    },
+    "sketchbook": {
+      "bg": "#808080",
+      "container": "#d2d2d2",
+      "button": "#444",
+      "buttonHover": "#000"
+    },
+    "freestuff": {
+      "bg": "#808080",
+      "container": "#ffffff",
+      "button": "#444",
+      "buttonHover": "#000"
+    },
+    "bazar": {
+      "bg": "#808080",
+      "container": "#d2d2d2",
+      "button": "#444",
+      "buttonHover": "#000"
+    }
+  },
   "ui": {
     "back": "back",
     "comingSoon": "coming soon",
     "nav": {
       "home": "home",
       "about": "about",
-      "dressme": "Dress me"
+      "dressme": "dress me"
     },
     "tabs": [
       {
@@ -36,21 +74,8 @@
       }
     ]
   },
-  "home": {
-    "colors": {
-      "bg": "#808080",
-      "container": "#d2d2d2",
-      "button": "#444",
-      "buttonHover": "#000"
-    }
-  },
+  "home": {},
   "about": {
-    "colors": {
-      "bg": "#4a4a4a",
-      "container": "rgba(60, 60, 60, 0.8)",
-      "button": "#ccc",
-      "buttonHover": "#fff"
-    },
     "titulo": {
       "texto": "About me",
       "color": "#ccc"
@@ -139,12 +164,6 @@
     ]
   },
   "dressme": {
-    "colors": {
-      "bg": "#6b4a5e",
-      "container": "#5a3d50",
-      "button": "#ccc",
-      "buttonHover": "#fff"
-    },
     "titulo": {
       "texto": "Dress me",
       "color": "rgba(255, 255, 255, 0.4)"
@@ -276,37 +295,37 @@
       {
         "name": "Amore",
         "slug": "amore",
-        "colors":{
+        "colors": {
           "bg": "#0d1520",
           "title": "#a0c8e0",
           "button": "#ccc",
           "buttonHover": "#fff"
+        }
       }
-    }
-      ]
-    },
-    "sketchbook": {
-      "imgCount": 14,
-      "basePath": "data/_SKETCHBOOK/",
-      "prefijo": "",
-      "extensions": [
-        "webp"
-      ]
-    },
-    "freestuff": {
-      "imgCount": 0,
-      "basePath": "data/_FREESTUFF/",
-      "prefijo": "",
-      "extensions": [
-        "webp"
-      ]
-    },
-    "bazar": {
-      "imgCount": 0,
-      "basePath": "data/_BAZAR/",
-      "prefijo": "",
-      "extensions": [
-        "webp"
-      ]
-    }
+    ]
+  },
+  "sketchbook": {
+    "imgCount": 14,
+    "basePath": "data/_SKETCHBOOK/",
+    "prefijo": "",
+    "extensions": [
+      "webp"
+    ]
+  },
+  "freestuff": {
+    "imgCount": 1,
+    "basePath": "data/_FREESTUFF/",
+    "prefijo": "",
+    "extensions": [
+      "png"
+    ]
+  },
+  "bazar": {
+    "imgCount": 0,
+    "basePath": "data/_BAZAR/",
+    "prefijo": "",
+    "extensions": [
+      "webp"
+    ]
   }
+}

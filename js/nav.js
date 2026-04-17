@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     const res = await fetch("data/data.json", { cache: "no-store" });
     data = await res.json();
-    // Colors live in data.colors[pageType]; titulo lives in data[pageType].titulo
-    applyColors(data.colors?.[pageType], data[pageType]?.titulo);
+    // All colors (bg, container, button, title) live in data.colors[pageType]
+    applyColors(data.colors?.[pageType]);
   } catch (e) { /* fallback to CSS defaults */ }
 
   // === ENTRANCE ANIMATION (if coming from another page) ===
@@ -66,14 +66,14 @@ window.addEventListener("pageshow", (e) => {
 });
 
 // ─── COLOR APPLICATION ─────────────────────────────────────
-function applyColors(colors, titulo) {
+function applyColors(colors) {
   const root = document.documentElement;
   const c = colors || {};
   if (c.bg) root.style.setProperty("--page-bg", c.bg);
   if (c.container) root.style.setProperty("--page-container-bg", c.container);
   if (c.button) root.style.setProperty("--btn-color", c.button);
   if (c.buttonHover) root.style.setProperty("--btn-active-hover", c.buttonHover);
-  if (titulo?.color) root.style.setProperty("--title-color", titulo.color);
+  if (c.title) root.style.setProperty("--title-color", c.title);
 }
 
 // ─── PAGE TRANSITIONS ──────────────────────────────────────

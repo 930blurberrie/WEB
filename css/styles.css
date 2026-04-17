@@ -281,7 +281,7 @@ a {
 body[data-page-type="about"] .page-title {
   top: -5dvh;
   left: -1dvw;
-  color: #ccc;
+  color: var(--title-color, #ccc);
   font-size: clamp(4.5rem, 14vw, 12rem);
 }
 
@@ -322,6 +322,8 @@ body[data-page-type="about"] {
   gap: 2rem;
   padding: 2rem;
   z-index: 1;
+  background-color: var(--page-container-bg);
+  transition: background-color 0.4s ease;
 }
 
 .about-layout {

@@ -1,0 +1,175 @@
+{
+  "siteTitle": "blurberrie930",
+
+  "seo": {
+    "author": "Irene Búrdalo",
+    "description": "Irene Búrdalo — Artista visual que explora lo humano a través de la ilustración y la animación. Portfolio, sketchbook y juegos de Blurberrie.",
+    "keywords": "Irene Búrdalo, blurberrie, 930blurberrie, ilustración, animación, artista visual, VFX, character design, portfolio",
+    "ogImage": "data/_LOGO/930blurberrie_logo.png"
+  },
+
+  "social": {
+    "instagram": "https://www.instagram.com/930blurberrie/"
+  },
+
+  "ui": {
+    "back": "back",
+    "comingSoon": "coming soon",
+    "nav": {
+      "home": "home",
+      "about": "about",
+      "dressme": "Dress me"
+    },
+    "tabs": [
+      { "id": "sec-animaciones", "label": "portfolio" },
+      { "id": "sec-sketchbook",  "label": "sketchbook" },
+      { "id": "sec-freestuff",   "label": "free stuff" },
+      { "id": "sec-bazar",       "label": "bazar" }
+    ]
+  },
+
+  "home": {
+    "colors": {
+      "bg": "#808080",
+      "container": "#d2d2d2",
+      "button": "#444",
+      "buttonHover": "#000"
+    }
+  },
+
+  "about": {
+    "colors": {
+      "bg": "#4a4a4a",
+      "container": "rgba(60, 60, 60, 0.8)",
+      "button": "#ccc",
+      "buttonHover": "#fff"
+    },
+    "titulo": {
+      "texto": "About me",
+      "color": "#ccc"
+    },
+    "character": {
+      "src": "data/_ABOUT/RECURSOS/character_aboutme.webm",
+      "srcFallback": "data/_ABOUT/RECURSOS_safari/character_aboutme.mov"
+    },
+    "footerText": "Aquesta actuació està impulsada i subvencionada pel Departament d'Empresa i Treball, i finançada al 100% pel fons REACT-UE com a part de la resposta de la Unió Europea a la pandèmia de la COVID-19.",
+    "bio": [
+      "Irene Búrdalo es una artista visual que explora lo humano a través de la ilustración y la animación.",
+      "A través de la figuración de la forma femenina se ponen encima de la mesa diálogos silenciosos acerca de la vulnerabilidad, lo íntimo y la ternura.",
+      "La formación en animación y VFX le dio un enfoque cartoon y una manera fresca de narrar: su interés en la moda y el diseño la llevaron a memorizar pasarelas y buscar archivos de marcas olvidadas de una época donde la moda era un ejercicio de artesanía.",
+      "Este cruce entre lo técnico, lo emocional y lo estético da forma a personajes cargados de dramatismo y sensibilidad a la vez que absurdos y desenfadados.",
+      "Su trabajo se mueve en ese espacio donde lo íntimo es visible, lo delicado convive con lo exagerado y lo cotidiano se transforma en performático."
+    ],
+    "decos": [
+      {
+        "src": "data/_ABOUT/RECURSOS/angel_alphatest.webm",
+        "srcFallback": "data/_ABOUT/RECURSOS_safari/angel_alphatest.mov",
+        "count": [3, 5],
+        "sizeRange": [100, 220],
+        "positions": [
+          { "top": "5%",  "left": "8%" },
+          { "top": "15%", "right": "5%" },
+          { "top": "50%", "left": "2%" },
+          { "bottom": "20%", "right": "10%" },
+          { "top": "35%", "right": "25%" }
+        ]
+      },
+      {
+        "src": "data/_ABOUT/RECURSOS/key.webm",
+        "srcFallback": "data/_ABOUT/RECURSOS_safari/key.mov",
+        "count": [3, 5],
+        "sizeRange": [50, 130],
+        "positions": [
+          { "top": "3%",  "right": "15%" },
+          { "top": "40%", "left": "5%" },
+          { "bottom": "10%", "left": "20%" },
+          { "top": "25%", "right": "3%" },
+          { "bottom": "30%", "right": "18%" }
+        ]
+      }
+    ]
+  },
+
+  "dressme": {
+    "colors": {
+      "bg": "#6b4a5e",
+      "container": "#5a3d50",
+      "button": "#ccc",
+      "buttonHover": "#fff"
+    },
+    "titulo": {
+      "texto": "Dress me",
+      "color": "rgba(255, 255, 255, 0.4)"
+    },
+    "basePath": "data/games/DRESS UP GAME/",
+    "categorias": [
+      { "id": "pelo",    "carpeta": "01-PELO",    "prefijo": "pelo",   "imgCount": 7, "altura": 576 },
+      { "id": "tops",    "carpeta": "02-TOPS",    "prefijo": "top",    "imgCount": 5, "altura": 480 },
+      { "id": "bottoms", "carpeta": "03-BOTTOMS", "prefijo": "bottom", "imgCount": 6, "altura": 976 },
+      { "id": "shoes",   "carpeta": "04-SHOES",   "prefijo": "shoes",  "imgCount": 5, "altura": 700 }
+    ],
+    "flechas": {
+      "basePath": "FLECHAS/",
+      "scaleRandom": 0.39,
+      "sets": {
+        "set01": {
+          "left":  "set01_left.png",
+          "right": "set01_right.png",
+          "size":  "clamp(40px, 7vh, 70px)"
+        },
+        "set02": {
+          "left":  "set02_left.png",
+          "right": "set02_right.png",
+          "size":  "clamp(55px, 10vh, 100px)"
+        }
+      },
+      "asignacion": [
+        { "cat": "pelo",    "left": "set01", "right": "set02" },
+        { "cat": "tops",    "left": "set02", "right": "set01" },
+        { "cat": "bottoms", "left": "set01", "right": "set02" },
+        { "cat": "shoes",   "left": "set02", "right": "set01" }
+      ]
+    },
+    "musica": {
+      "src": "data/games/DRESS UP GAME/musica.wav",
+      "loop": true,
+      "playLabel": "play",
+      "pauseLabel": "pause"
+    },
+    "labels": {
+      "random": "random",
+      "download": "download"
+    }
+  },
+
+  "animaciones": {
+    "opacidadTitulo": 0.3,
+    "opacidadMotivo": 0.35,
+    "proyectos": [
+      {
+        "name": "Bedrotting",
+        "slug": "bedrotting",
+        "colors": { "bg": "#1a1225", "title": "#c9a0dc", "button": "#ccc", "buttonHover": "#fff" }
+      },
+      {
+        "name": "24h Dog",
+        "slug": "24hdog",
+        "colors": { "bg": "#1a1a1a", "title": "#e8c170", "button": "#ccc", "buttonHover": "#fff" }
+      },
+      {
+        "name": "Deadcrush",
+        "slug": "deadcrush",
+        "colors": { "bg": "#152040", "title": "#7eb8da", "button": "#ccc", "buttonHover": "#fff" }
+      },
+      {
+        "name": "Eisbär",
+        "slug": "eisbaer",
+        "colors": { "bg": "#0d1520", "title": "#a0c8e0", "button": "#ccc", "buttonHover": "#fff" }
+      }
+    ]
+  },
+
+  "sketchbook": { "imgCount": 14, "basePath": "data/_SKETCHBOOK/", "prefijo": "", "extensions": ["webp"] },
+  "freestuff":  { "imgCount": 0,  "basePath": "data/_FREESTUFF/",  "prefijo": "", "extensions": ["webp"] },
+  "bazar":      { "imgCount": 0,  "basePath": "data/_BAZAR/",      "prefijo": "", "extensions": ["webp"] }
+}

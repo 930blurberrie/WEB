@@ -1,0 +1,571 @@
+/* =========================================================
+   GLOBAL · RESET · VARIABLES
+   ========================================================= */
+:root {
+  /* Layout */
+  --frame-inset-y: 7.5dvh;
+  --frame-inset-x: 7.5dvw;
+
+  /* Fonts */
+  --font-text: "Jua", sans-serif;
+  --font-menu: "Playwrite US Trad Guides", cursive;
+  --font-title: "Ballet", cursive;
+
+  /* Colors — defaults, overridden per page by nav.js from data.json */
+  --page-bg: #808080;
+  --page-container-bg: #d2d2d2;
+  --btn-color: #444;
+  --btn-active-hover: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: var(--page-bg);
+  color: #333;
+}
+
+/* Page transitions */
+body.page-exit {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+/* Hide elements instantly if entering via transition (prevents flash) */
+html.transitioning .page-container,
+html.transitioning #about-container,
+html.transitioning .page-title,
+html.transitioning .logo,
+html.transitioning .nav-top-right,
+html.transitioning .nav-bottom-center,
+html.transitioning .nav-back,
+html.transitioning .dressup-actions,
+html.transitioning .anim-motivo {
+  opacity: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================================
+   LOGO (fixed top-left)
+   ========================================================= */
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.logo img {
+  height: clamp(100px, 12vw, 200px);
+  width: auto;
+}
+
+/* =========================================================
+   NAVIGATION (fixed corners) — injected by nav.js
+   ========================================================= */
+.nav-top-right {
+  position: fixed;
+  top: calc(var(--frame-inset-y) / 2);
+  right: calc(var(--frame-inset-x) / 2);
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1.5dvw;
+  z-index: 1000;
+}
+
+.nav-bottom-center {
+  position: fixed;
+  bottom: calc(var(--frame-inset-y) / 2);
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  gap: 1.5dvw;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+/* Nav links — colors from data.json via CSS custom properties */
+.nav-link {
+  font-family: var(--font-menu);
+  font-size: clamp(0.75rem, 1.4dvw, 1rem);
+  color: var(--btn-color, #444);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--btn-active-hover, #000);
+}
+.nav-link.active {
+  color: var(--btn-active-hover, #000);
+  font-weight: 700;
+}
+
+/* Back link for detail pages — fixed bottom center */
+.nav-back {
+  position: fixed;
+  bottom: calc(var(--frame-inset-y) / 2);
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: var(--font-menu);
+  font-size: clamp(1.1rem, 2.2dvw, 1.75rem);
+  color: var(--btn-color, #ccc);
+  text-decoration: underline;
+  z-index: 1000;
+}
+.nav-back:hover {
+  color: var(--btn-active-hover, #fff);
+}
+
+/* =========================================================
+   PAGE CONTAINER — 90dvw × 90dvh inner box (anakatana style)
+   ========================================================= */
+#content-frame {
+  position: fixed;
+  top: var(--frame-inset-y);
+  bottom: var(--frame-inset-y);
+  left: var(--frame-inset-x);
+  right: var(--frame-inset-x);
+  background-color: var(--page-container-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.content-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.page-container {
+  position: fixed;
+  top: var(--frame-inset-y);
+  bottom: var(--frame-inset-y);
+  left: var(--frame-inset-x);
+  right: var(--frame-inset-x);
+  z-index: 1;
+}
+
+/* =========================================================
+   HOME SECTIONS
+   ========================================================= */
+.home-section {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s;
+}
+.home-section.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* Horizontal-gallery sections (sketchbook / freestuff / bazar) */
+#sec-sketchbook,
+#sec-freestuff,
+#sec-bazar {
+  height: 100%;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+#sec-sketchbook.active,
+#sec-freestuff.active,
+#sec-bazar.active {
+  display: flex;
+  flex-direction: column;
+}
+/* Animaciones needs full height for absolute positioning */
+#sec-animaciones {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Animaciones — scattered thumbnails */
+.anim-grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.anim-thumb {
+  display: block;
+  position: absolute;
+  width: clamp(90px, 14vw, 170px);
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+/* Positions set by JS from random generation */
+.anim-thumb:hover { transform: scale(1.08); }
+.anim-thumb video,
+.anim-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.anim-thumb-label {
+  display: block;
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: clamp(0.6rem, 1.2vw, 0.85rem);
+  color: #444;
+  margin-top: 0.3rem;
+}
+
+/* Sketchbook — horizontal scroll gallery */
+.sketch-gallery {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  padding: 0 33dvw 0 33dvw;
+}
+.sketch-gallery img {
+  height: 100%;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+  scroll-snap-align: start;
+}
+/* Empty gallery → "coming soon" centered, no horizontal padding */
+.sketch-gallery.gallery-empty {
+  padding: 0;
+  justify-content: center;
+}
+
+/* Coming soon placeholder */
+.coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: var(--font-text);
+  font-size: 2rem;
+  color: #999;
+}
+
+/* =========================================================
+   PAGE TITLE (Ballet font, corners)
+   ========================================================= */
+.page-title {
+  position: fixed;
+  font-family: var(--font-title);
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 400;
+  z-index: 100;
+  pointer-events: none;
+  will-change: transform;
+}
+
+body[data-page-type="about"] .page-title {
+  top: -5dvh;
+  left: -1dvw;
+  color: #ccc;
+  font-size: clamp(4.5rem, 14vw, 12rem);
+}
+
+body[data-page-type="dressme"] .page-title {
+  color: var(--title-color, rgba(255, 255, 255, 0.4));
+}
+body[data-page-type="dressme"] .page-title:first-of-type {
+  top: -1.5dvh;
+  left: 0.5dvw;
+}
+body[data-page-type="dressme"] .page-title--bottom {
+  bottom: -1.5dvh;
+  right: 0.5dvw;
+  transform: rotate(180deg);
+}
+
+body[data-page-type="animacion"] .page-title {
+  color: var(--title-color, rgba(255, 255, 255, 0.3));
+}
+body[data-page-type="animacion"] .page-title:first-of-type {
+  top: -5dvh;
+  left: -1.5dvw;
+}
+body[data-page-type="animacion"] .page-title--bottom {
+  bottom: -5dvh;
+  right: -1.5dvw;
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+body[data-page-type="about"] {
+  background-color: var(--page-bg);
+  color: #ddd;
+}
+
+#about-container {
+  position: fixed;
+  top: var(--frame-inset-y);
+  bottom: var(--frame-inset-y);
+  left: var(--frame-inset-x);
+  right: var(--frame-inset-x);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.about-layout {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column;
+  }
+}
+
+.about-visual {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+}
+.about-visual video {
+  max-height: 60vh;
+  width: auto;
+  max-width: 100%;
+  background: transparent;
+}
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  line-height: 1.6;
+}
+
+.about-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+.about-footer-text {
+  flex: 1;
+  min-width: 200px;
+}
+.about-logos {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.about-logos img {
+  height: 40px;
+  width: auto;
+}
+
+/* Decorative floating elements (positioned dynamically by about.js) */
+.about-deco {
+  position: fixed;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* =========================================================
+   DRESS ME PAGE
+   ========================================================= */
+body[data-page-type="dressme"] {
+  background-color: var(--page-bg);
+  color: #fff;
+}
+
+body[data-page-type="dressme"] .page-container {
+  background-color: var(--page-container-bg);
+}
+
+#dressup-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Arrow columns on left and right — overlapping the frame */
+.dressup-arrows {
+  position: relative;
+  height: 85%;
+  width: 0;
+  z-index: 5;
+}
+.dressup-arrows--left {
+  margin-right: -2.5rem;
+}
+.dressup-arrows--right {
+  margin-left: -2.5rem;
+}
+
+.arrow-btn {
+  position: absolute;
+  left: 50%;
+  --btn-scale: 1;
+  transform: translate(-50%, -50%) scale(var(--btn-scale));
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s;
+}
+.arrow-btn:hover {
+  transform: translate(-50%, -50%) scale(calc(var(--btn-scale) * 1.15));
+}
+.arrow-btn img {
+  height: clamp(40px, 7vh, 70px);
+  width: auto;
+}
+.arrow-btn--deco img {
+  height: clamp(55px, 10vh, 100px);
+}
+
+/* Random & Download buttons */
+.dressup-actions {
+  position: fixed;
+  bottom: calc(var(--frame-inset-y) / 2);
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  gap: 1.5dvw;
+  z-index: 1000;
+}
+.dressup-action-btn {
+  background: none;
+  border: none;
+  color: var(--btn-color, #ccc);
+  font-family: var(--font-menu);
+  font-size: clamp(0.75rem, 1.4dvw, 1rem);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+.dressup-action-btn:hover {
+  color: var(--btn-active-hover, #fff);
+}
+
+/* Frame */
+.dressup-frame {
+  position: relative;
+  height: 85%;
+  aspect-ratio: 3 / 4;
+  flex-shrink: 0;
+}
+.dressup-marco {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Character layers — stacked absolutely, full height inside frame */
+.dressup-layers {
+  position: absolute;
+  top: 5%;
+  bottom: 3%;
+  left: 5%;
+  right: 5%;
+  z-index: 1;
+  overflow: hidden;
+  transform: scale(0.88);
+  transform-origin: center center;
+}
+.dressup-layers img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  #dressup-container {
+    gap: 0.3rem;
+  }
+  .dressup-frame {
+    height: 80%;
+  }
+  .dressup-arrows {
+    height: 80%;
+    width: clamp(30px, 10vw, 50px);
+  }
+}
+
+/* =========================================================
+   ANIMACION DETAIL PAGE
+   ========================================================= */
+body[data-page-type="animacion"] {
+  background-color: #111;
+  color: #fff;
+}
+
+body[data-page-type="animacion"] .page-container {
+  background-color: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ornamental motif */
+.anim-motivo {
+  position: fixed;
+  width: clamp(700px, 130vw, 2200px);
+  height: auto;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+/* Positions set randomly by animacion.js */
+
+#anim-video-container {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#anim-video {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Animacion nav colors — uses same --btn-color/--btn-active-hover vars set by animacion.js */
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */

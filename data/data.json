@@ -173,7 +173,7 @@
       {
         "name": "Amore",
         "slug": "amore",
-        "colors": { "bg": "#321621", "title": "#ff3589", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#5f565c", "title": "#ff3589", "button": "#ccc", "buttonHover": "#fff" }
       }
     ]
   },

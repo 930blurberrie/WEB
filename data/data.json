@@ -158,22 +158,27 @@
       {
         "name": "24h Dog",
         "slug": "24hdog",
-        "colors": { "bg": "#1a1a1a", "title": "#e8c170", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#d1dcdb", "title": "#00ffde", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
         "name": "Deadcrush",
         "slug": "deadcrush",
-        "colors": { "bg": "#152040", "title": "#7eb8da", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#7bd5ff", "title": "#d5f2ff", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
         "name": "Eisbär",
         "slug": "eisbaer",
-        "colors": { "bg": "#0d1520", "title": "#a0c8e0", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#ff5ca", "title": "#a0c8e0", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
         "name": "Amore",
         "slug": "amore",
-        "colors": { "bg": "#0d1520", "title": "#a0c8e0", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#000000", "title": "#ff3589", "button": "#ccc", "buttonHover": "#fff" }
+      },
+      {
+        "name": "Acid Flowers and a Medal from Mother",
+        "slug": "acidflowerspink",
+        "colors": { "bg": "#000000", "title": "#91858a", "button": "#ccc", "buttonHover": "#fff" }
       }
     ]
   },

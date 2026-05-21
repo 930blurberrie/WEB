@@ -163,7 +163,7 @@
       {
         "name": "Deadcrush",
         "slug": "deadcrush",
-        "colors": { "bg": "#88824e", "title": "#ffe956", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#7bd5ff", "title": "#d5f2ff", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
         "name": "Eisbär",
@@ -173,7 +173,7 @@
       {
         "name": "Amore",
         "slug": "amore",
-        "colors": { "bg": "#5f565c", "title": "#ff3589", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#000000", "title": "#ff3589", "button": "#ccc", "buttonHover": "#fff" }
       }
     ]
   },

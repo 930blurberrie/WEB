@@ -158,7 +158,7 @@
       {
         "name": "24h Dog",
         "slug": "24hdog",
-        "colors": { "bg": "#1a1a1a", "title": "#e8c170", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#d1dcdb", "title": "#00ffde", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
         "name": "Deadcrush",

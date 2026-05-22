@@ -176,9 +176,9 @@
         "colors": { "bg": "#000000", "title": "#ff3589", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
-        "name": "Acid Flowers and a Medal from Mother",
+        "name": "a Medal from Mother",
         "slug": "acidflowerspink",
-        "colors": { "bg": "#000000", "title": "#91858a", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#ff5ca0", "title": "#75676d", "button": "#ccc", "buttonHover": "#fff" }
       }
     ]
   },

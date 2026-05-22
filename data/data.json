@@ -148,7 +148,7 @@
   },
   "animaciones": {
     "opacidadTitulo": 0.3,
-    "opacidadMotivo": 0.7,
+    "opacidadMotivo": 0.95,
     "proyectos": [
       {
         "name": "Bedrotting",
@@ -188,7 +188,7 @@
       {
         "name": "a Medal from Mother 3",
         "slug": "acidflowersblue",
-        "colors": { "bg": "#62b5ae", "title": "#95afad", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#62b5ae", "title": "#d0f2ef", "button": "#ccc", "buttonHover": "#fff" }
       }
     ]
   },

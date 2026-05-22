@@ -24,8 +24,8 @@
       "title": "#ccc"
     },
     "dressme": {
-      "bg": "#59e9e7",
-      "container": "#9dc2c4",
+      "bg": "#e9d39a",
+      "container": "#c8ba96",
       "button": "#ccc",
       "buttonHover": "#fff",
       "title": "rgba(255, 255, 255, 0.4)"

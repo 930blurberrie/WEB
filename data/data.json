@@ -178,7 +178,12 @@
       {
         "name": "a Medal from Mother",
         "slug": "acidflowerspink",
-        "colors": { "bg": "#ff5ca0", "title": "#75676d", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#ff006a", "title": "#75676d", "button": "#ccc", "buttonHover": "#fff" }
+      },
+      {
+        "name": "a Medal from Mother II",
+        "slug": "acidflowersyellow",
+        "colors": { "bg": "#cccdb5", "title": "#f1ff19", "button": "#ccc", "buttonHover": "#fff" }
       }
     ]
   },

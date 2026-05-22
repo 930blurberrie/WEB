@@ -158,12 +158,12 @@
       {
         "name": "24h Dog",
         "slug": "24hdog",
-        "colors": { "bg": "#d1dcdb", "title": "#00ffde", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#748886", "title": "#00ffde", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
         "name": "Deadcrush",
         "slug": "deadcrush",
-        "colors": { "bg": "#7bd5ff", "title": "#d5f2ff", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#363c60", "title": "#072aff", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
         "name": "Eisbär",
@@ -178,7 +178,7 @@
       {
         "name": "a Medal from Mother 1",
         "slug": "acidflowerspink",
-        "colors": { "bg": "#e29abe", "title": "#75676d", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#e372aa", "title": "#75676d", "button": "#ccc", "buttonHover": "#fff" }
       },
       {
         "name": "a Medal from Mother 2",
@@ -188,7 +188,7 @@
       {
         "name": "a Medal from Mother 3",
         "slug": "acidflowersblue",
-        "colors": { "bg": "#62b5ae", "title": "#d0f2ef", "button": "#ccc", "buttonHover": "#fff" }
+        "colors": { "bg": "#486e6a", "title": "#d0f2ef", "button": "#ccc", "buttonHover": "#fff" }
       }
     ]
   },

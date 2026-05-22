@@ -148,7 +148,7 @@
   },
   "animaciones": {
     "opacidadTitulo": 0.3,
-    "opacidadMotivo": 0.95,
+    "opacidadMotivo": 0.35,
     "proyectos": [
       {
         "name": "Bedrotting",

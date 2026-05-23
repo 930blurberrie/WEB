@@ -28,7 +28,7 @@
       "container": "#262626",
       "button": "#ccc",
       "buttonHover": "#fff",
-      "title": "rgba(255, 255, 255, 0.4)"
+      "title": "rgba(255, 255, 255, 0.9)"
     },
     "sketchbook": {
       "bg": "#808080",

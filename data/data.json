@@ -26,8 +26,8 @@
     "dressme": {
       "bg": "#b4d5c9",
       "container": "#262626",
-      "button": "#ccc",
-      "buttonHover": "#fff",
+      "button": "#ffffff",
+      "buttonHover": "#13f7ff",
       "title": "rgba(255, 255, 255, 0.9)"
     },
     "sketchbook": {

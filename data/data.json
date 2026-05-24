@@ -24,11 +24,11 @@
       "title": "#ccc"
     },
     "dressme": {
-      "bg": "#e29abe",
-      "container": "#7c5e7c",
-      "button": "#ccc",
-      "buttonHover": "#fff",
-      "title": "rgba(255, 255, 255, 0.4)"
+      "bg": "#b4d5c9",
+      "container": "#262626",
+      "button": "#ffffff",
+      "buttonHover": "#262626",
+      "title": "rgba(255, 255, 255, 0.9)"
     },
     "sketchbook": {
       "bg": "#808080",

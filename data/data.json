@@ -24,11 +24,11 @@
       "title": "#ccc"
     },
     "dressme": {
-      "bg": "#b4d5c9",
-      "container": "#7a7a7a",
+      "bg": "#95d4d6",
+      "container": "#404040",
       "button": "#ffffff",
       "buttonHover": "#262626",
-      "title": "rgba(255, 255, 255, 0.9)"
+      "title": "rgba(255, 255, 255, 0.5)"
     },
     "sketchbook": {
       "bg": "#808080",
@@ -123,7 +123,7 @@
     ],
     "flechas": {
       "basePath": "FLECHAS/",
-      "scaleRandom": 0.39,
+      "scaleRandom": 0.1,
       "sets": {
         "set01": { "left": "set01_left.png",  "right": "set01_right.png", "size": "clamp(40px, 7vh, 70px)" },
         "set02": { "left": "set02_left.png",  "right": "set02_right.png", "size": "clamp(55px, 10vh, 100px)" }

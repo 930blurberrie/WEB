@@ -25,7 +25,7 @@
     },
     "dressme": {
       "bg": "#88cfc6",
-      "container": "#465553",
+      "container": "#e7fffc",
       "button": "#262626",
       "buttonHover": "#fff",
       "title": "rgba(255, 255, 255, 0.5)"

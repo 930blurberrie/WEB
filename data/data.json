@@ -24,8 +24,8 @@
       "title": "#ccc"
     },
     "dressme": {
-      "bg": "#e8e09a",
-      "container": "#b3ab64",
+      "bg": "#91ffe9",
+      "container": "#617271",
       "button": "#262626",
       "buttonHover": "#fff",
       "title": "rgba(255, 255, 255, 0.5)"
@@ -125,7 +125,7 @@
       "basePath": "FLECHAS/",
       "scaleRandom": 0.1,
       "sets": {
-        "set01": { "left": "set01_left.png",  "right": "set01_right.png", "size": "clamp(40px, 7vh, 70px)" },
+        "set01": { "left": "set01_left.png",  "right": "set01_right.png", "size": "clamp(28px, 4.5vh, 50px)" },
         "set02": { "left": "set02_left.png",  "right": "set02_right.png", "size": "clamp(55px, 10vh, 100px)" }
       },
       "asignacion": [

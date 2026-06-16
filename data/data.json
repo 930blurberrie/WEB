@@ -24,11 +24,11 @@
       "title": "#ccc"
     },
     "dressme": {
-      "bg": "#b4d5c9",
-      "container": "#7a7a7a",
-      "button": "#ffffff",
-      "buttonHover": "#262626",
-      "title": "rgba(255, 255, 255, 0.9)"
+      "bg": "#050500",
+      "container": "#c8cd66",
+      "button": "#c8cd66",
+      "buttonHover": "#fff",
+      "title": "rgba(255, 255, 255, 0.5)"
     },
     "sketchbook": {
       "bg": "#808080",
@@ -123,16 +123,16 @@
     ],
     "flechas": {
       "basePath": "FLECHAS/",
-      "scaleRandom": 0.39,
+      "scaleRandom": 0.01,
       "sets": {
-        "set01": { "left": "set01_left.png",  "right": "set01_right.png", "size": "clamp(40px, 7vh, 70px)" },
+        "set01": { "left": "set01_left.png",  "right": "set01_right.png", "size": "clamp(28px, 4.5vh, 50px)" },
         "set02": { "left": "set02_left.png",  "right": "set02_right.png", "size": "clamp(55px, 10vh, 100px)" }
       },
       "asignacion": [
-        { "cat": "pelo",    "left": "set01", "right": "set02" },
-        { "cat": "tops",    "left": "set02", "right": "set01" },
-        { "cat": "bottoms", "left": "set01", "right": "set02" },
-        { "cat": "shoes",   "left": "set02", "right": "set01" }
+        { "cat": "pelo",    "left": "set02", "right": "set02" },
+        { "cat": "tops",    "left": "set02", "right": "set02" },
+        { "cat": "bottoms", "left": "set02", "right": "set02" },
+        { "cat": "shoes",   "left": "set02", "right": "set02" }
       ]
     },
     "musica": {

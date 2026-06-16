@@ -129,10 +129,10 @@
         "set02": { "left": "set02_left.png",  "right": "set02_right.png", "size": "clamp(55px, 10vh, 100px)" }
       },
       "asignacion": [
-        { "cat": "pelo",    "left": "set01", "right": "set01" },
-        { "cat": "tops",    "left": "set01", "right": "set01" },
-        { "cat": "bottoms", "left": "set01", "right": "set01" },
-        { "cat": "shoes",   "left": "set01", "right": "set01" }
+        { "cat": "pelo",    "left": "set02", "right": "set02" },
+        { "cat": "tops",    "left": "set02", "right": "set02" },
+        { "cat": "bottoms", "left": "set02", "right": "set02" },
+        { "cat": "shoes",   "left": "set02", "right": "set02" }
       ]
     },
     "musica": {

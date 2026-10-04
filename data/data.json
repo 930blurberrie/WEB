@@ -116,7 +116,7 @@
     },
     "basePath": "data/games/DRESS UP GAME/",
     "categorias": [
-      { "id": "pelo",    "carpeta": "01-PELO",    "prefijo": "pelo",   "imgCount": 8, "altura": 576 },
+      { "id": "pelo",    "carpeta": "01-PELO",    "prefijo": "pelo",   "imgCount": 9, "altura": 576 },
       { "id": "tops",    "carpeta": "02-TOPS",    "prefijo": "top",    "imgCount": 10, "altura": 478 },
       { "id": "bottoms", "carpeta": "03-BOTTOMS", "prefijo": "bottom", "imgCount": 9, "altura": 976 },
       { "id": "shoes",   "carpeta": "04-SHOES",   "prefijo": "shoes",  "imgCount": 7, "altura": 700 }

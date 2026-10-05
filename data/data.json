@@ -138,7 +138,7 @@
     "musica": {
       "src": "data/games/DRESS UP GAME/musica.wav",
       "loop": true,
-      "playLabel": "play",
+      "playLabel": "music",
       "pauseLabel": "pause"
     },
     "labels": {
